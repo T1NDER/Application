@@ -1,4 +1,6 @@
-import salary
+from salary import salary
+from datetime import date
+import emoji
 
 
 if __name__ == '__main__':
@@ -12,16 +14,21 @@ if __name__ == '__main__':
 
         ]
 
-    salary_rates = [
+    salary_rates = {
 
-        {
           "Разработчик": 150,
           "Маркетолог": 100,
           "Веб-Дизайнер": 120
+
         }
 
-        ]
+
 
     calculated_salaries = salary.calculate_salary(employees, salary_rates)
-    print(calculated_salaries)
+    today = date.today()
+    print(f'{calculated_salaries}, {today}')
+
+
+    result = emoji.emojize('Python is :red_heart')
+    print(result)
 
